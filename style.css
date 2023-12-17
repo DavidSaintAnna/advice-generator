@@ -23,15 +23,14 @@ body {
 }
 
 main {
-  width: 88%;
+  width: 100%;
   height: 314px;
   background-color: var(--card-background-color);
-  display: flex;
   border-radius: 10px;
-  padding: 1em;
+  padding: 30px 50px;
 }
 
-.main-content {
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +39,7 @@ main {
   font-size: 2.3rem;
   font-weight: 800;
   color: var(--font-color);
-  padding: 40px 50px 30px 10px;
+  padding: 40px;
   text-align: center;
   gap: 22px;
 }
@@ -50,7 +49,7 @@ span {
   text-transform: uppercase;
   letter-spacing: 3.2px;
 }
-.imgs {
+.img {
   width: 100%;
   height: 100%;
   display: flex;
@@ -71,4 +70,21 @@ span {
 .btn:hover,
 .btn:focus {
   box-shadow: 0 0 40px var(--Neon-Green);
+}
+
+@media only screen and (min-width: 991px) {
+  main {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .card-content {
+    width: 100%;
+    height: 100%;
+  }
 }
