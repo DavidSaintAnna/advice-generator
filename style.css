@@ -42,6 +42,12 @@ main {
   text-align: center;
   gap: 22px;
 }
+
+.advice {
+  min-height: 95px;
+  max-height: 95px;
+  overflow-y: auto;
+}
 span {
   color: var(--neon-green);
   font-size: 1.2rem;
