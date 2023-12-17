@@ -1,6 +1,6 @@
 const $button = document.querySelector(".btn");
 const $adviceString = document.querySelector(".advice");
-const $numberAdvice = document.querySelector(".numberAdvice");
+const $numberAdvice = document.querySelector(".number-advice");
 
 function generateUrl() {
   const randomNumber = Math.floor(Math.random() * 201);
