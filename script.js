@@ -1,9 +1,9 @@
-const btn = document.querySelector(".btn");
-const adviceString = document.querySelector(".advice");
-const numberAdvice = document.querySelector(".numberAdvice");
+const $button = document.querySelector(".btn");
+const $adviceString = document.querySelector(".advice");
+const $numberAdvice = document.querySelector(".numberAdvice");
 
 function generateUrl() {
-  let randomNumber = Math.floor(Math.random() * 201);
+  const randomNumber = Math.floor(Math.random() * 201);
   const url = `https://api.adviceslip.com/advice/${randomNumber}`;
 
   return fetch(url)
@@ -11,13 +11,13 @@ function generateUrl() {
       return response.json();
     })
     .then((data) => {
-      return [data.slip.advice, data.slip.id];
+      return data.slip;
     });
 }
 
-btn.addEventListener("click", () => {
-  generateUrl().then((advice) => {
-    adviceString.textContent = advice[0];
-    numberAdvice.textContent = `#${advice[1]}`;
+$button.addEventListener("click", () => {
+  generateUrl().then((slip) => {
+    $adviceString.textContent = slip.advice;
+    $numberAdvice.textContent = `#${slip.id}`;
   });
 });
